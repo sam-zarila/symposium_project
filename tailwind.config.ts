@@ -9,8 +9,8 @@ export default {
   theme: {
     extend: {
       animation: {
-        'scroll-left-to-right': 'scrollLeftToRight 15s linear infinite',
-        'scroll-right-to-left': 'scrollRightToLeft 15s linear infinite',
+        'scroll-left-to-right': 'scrollLeftToRight 20s linear infinite',
+        'scroll-right-to-left': 'scrollRightToLeft 20s linear infinite',
       },
       keyframes: {
         scrollLeftToRight: {
@@ -23,6 +23,7 @@ export default {
         },
       },
     },
+    
   },
   plugins: [],
 } satisfies Config;

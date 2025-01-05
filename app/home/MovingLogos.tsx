@@ -14,48 +14,51 @@ const logos = [
 
 const MovingLogos = () => {
   return (
-    <div className="relative w-full overflow-hidden py-16 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-      {/* Section Title */}
-      <h2 className="text-center text-white text-3xl sm:text-4xl font-bold mb-8">
+    <div className="relative w-full py-16 bg-gray-50">
+      <h2 className="text-center text-gray-800 text-4xl sm:text-5xl font-bold mb-12">
         Partner Industries
       </h2>
 
-      {/* Top Row Moving Left to Right */}
-      <div className="absolute flex animate-scroll-left-to-right whitespace-nowrap">
-        {[...logos, ...logos].map((logo, index) => (
-          <div
-            key={`top-${index}`}
-            className="flex flex-col items-center mx-6 sm:mx-8"
-          >
-            <img
-              src={`/images/${logo.file}`}
-              alt={logo.name}
-              className="h-16 sm:h-24 w-16 sm:w-24 object-contain rounded-full shadow-lg"
-            />
-            <p className="text-white mt-2 text-sm sm:text-base font-medium">
-              {logo.name}
-            </p>
-          </div>
-        ))}
+      {/* Top Row - Moving Left to Right */}
+      <div className="relative h-40 sm:h-48 overflow-hidden">
+        <div className="absolute flex animate-scroll-left-to-right whitespace-nowrap">
+          {[...logos, ...logos].map((logo, index) => (
+            <div
+              key={`top-${index}`}
+              className="flex flex-col items-center mx-8 sm:mx-12"
+            >
+              <img
+                src={`/images/${logo.file}`}
+                alt={logo.name}
+                className="h-20 sm:h-28 w-20 sm:w-28 object-contain"
+              />
+              <p className="text-gray-700 mt-2 text-sm sm:text-base font-medium">
+                {logo.name}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Bottom Row Moving Right to Left */}
-      <div className="absolute flex animate-scroll-right-to-left whitespace-nowrap bottom-0">
-        {[...logos, ...logos].map((logo, index) => (
-          <div
-            key={`bottom-${index}`}
-            className="flex flex-col items-center mx-6 sm:mx-8"
-          >
-            <img
-              src={`/images/${logo.file}`}
-              alt={logo.name}
-              className="h-16 sm:h-24 w-16 sm:w-24 object-contain rounded-full shadow-lg"
-            />
-            <p className="text-white mt-2 text-sm sm:text-base font-medium">
-              {logo.name}
-            </p>
-          </div>
-        ))}
+      {/* Bottom Row - Moving Right to Left */}
+      <div className="relative h-40 sm:h-48 overflow-hidden mt-8">
+        <div className="absolute flex animate-scroll-right-to-left whitespace-nowrap">
+          {[...logos, ...logos].map((logo, index) => (
+            <div
+              key={`bottom-${index}`}
+              className="flex flex-col items-center mx-8 sm:mx-12"
+            >
+              <img
+                src={`/images/${logo.file}`}
+                alt={logo.name}
+                className="h-20 sm:h-28 w-20 sm:w-28 object-contain"
+              />
+              <p className="text-gray-700 mt-2 text-sm sm:text-base font-medium">
+                {logo.name}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
