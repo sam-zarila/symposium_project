@@ -5,6 +5,7 @@ import TrustedPartner from "./home/steps";
 import MovingLogos from "./home/MovingLogos";
 import ServicesSection from "./home/services";
 import MarketNewsSection from "./home/NewsRoom";
+import FaqSection from "./home/FAQ";
 
 
 
@@ -17,6 +18,7 @@ export default function Home(){
 <TrustedPartner/> 
 <ServicesSection/>
 <MarketNewsSection/>
+<FaqSection/>
     </>
   )
 }
