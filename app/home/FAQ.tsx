@@ -49,12 +49,12 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className=" py-16 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-900 text-center">
+        <h2 className="text-4xl font-bold text-green-400 text-center">
           Frequently Asked Questions
         </h2>
-        <p className="mt-4 text-gray-600 text-center text-lg">
+        <p className="mt-4 text-green-600 text-center text-lg">
           Get answers to the most common questions about our Online Auditing
           System and its features.
         </p>
@@ -63,13 +63,15 @@ const FaqSection = () => {
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-md overflow-hidden"
+              className="bg-green-900 shadow-md rounded-md overflow-hidden"
             >
               <button
                 className="flex justify-between items-center w-full p-4 text-left text-gray-800 hover:bg-gray-100 focus:outline-none"
                 onClick={() => toggleAccordion(index)}
               >
-                <span className="text-lg font-medium">{faq.question}</span>
+                <span className="
+                text-white
+                text-lg font-medium hover:text-black" >{faq.question}</span>
                 <svg
                   className={`w-5 h-5 transition-transform duration-200 ${
                     activeIndex === index ? "rotate-180" : "rotate-0"
@@ -88,8 +90,8 @@ const FaqSection = () => {
                 </svg>
               </button>
               {activeIndex === index && (
-                <div className="p-4 border-t border-gray-200">
-                  <p className="text-gray-600">{faq.answer}</p>
+                <div className="bg-white p-4 border-t border-gray-200">
+                  <p className=" text-gray-600">{faq.answer}</p>
                 </div>
               )}
             </div>
