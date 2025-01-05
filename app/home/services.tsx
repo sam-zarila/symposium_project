@@ -1,6 +1,6 @@
 import React from "react";
 
-const Services = [
+const services = [
   {
     title: "Real-Time Financial Monitoring",
     description:
@@ -31,16 +31,37 @@ const Services = [
       "Visualize complex data through interactive dashboards, making decision-making quick and effective.",
     icon: "📈",
   },
-]
+];
 
-const ServiceSection =()=>{
+const ServicesSection = () => {
   return (
-    <section className="bg-gray-500 py-12 px-4">
-      <div className="mx-w-7xl ">
+    <section className="bg-gray-50 py-16 px-4">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+          Our Services
+        </h2>
+        <p className="mt-4 text-gray-600">
+          Explore our powerful tools designed to elevate your business to the
+          next level.
+        </p>
 
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+            >
+              <div className="text-4xl text-blue-500">{service.icon}</div>
+              <h3 className="mt-4 text-xl font-semibold text-gray-800">
+                {service.title}
+              </h3>
+              <p className="mt-2 text-gray-600">{service.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-
-
     </section>
-  )
-}
+  );
+};
+
+export default ServicesSection;
