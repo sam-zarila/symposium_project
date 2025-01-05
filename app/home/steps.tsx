@@ -38,7 +38,7 @@ export default function TrustedPartner() {
                 <span className="text-green-400">Confirm</span> your registration and gain immediate access to secure, insured services.
               </p>
               <p className="text-base sm:text-lg text-gray-400">
-                Once your registration is confirmed, you'll have full access to our top-tier, insured services, designed to meet your exact needs.
+                Once your registration is confirmed, you will have full access to our top-tier, insured services, designed to meet your exact needs.
               </p>
             </div>
           </div>

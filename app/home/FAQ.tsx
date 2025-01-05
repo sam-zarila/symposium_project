@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState } from "react";
 
@@ -18,7 +18,6 @@ const faqData = [
     answer:
       "The system provides real-time tracking of income, expenditures, and profits. It integrates financial data to offer actionable recommendations for improving profitability and avoiding financial setbacks.",
   },
- 
   {
     question: "How does the system help with budgeting and forecasting?",
     answer:
@@ -42,14 +41,14 @@ const faqData = [
 ];
 
 const FaqSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index:any) => {
+  const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <section className=" py-12 px-6">
+    <section className="py-12 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-green-400 text-center">
           Frequently Asked Questions
@@ -69,9 +68,9 @@ const FaqSection = () => {
                 className="flex justify-between items-center w-full p-4 text-left text-gray-800 hover:bg-gray-100 focus:outline-none"
                 onClick={() => toggleAccordion(index)}
               >
-                <span className="
-                text-white
-                text-lg font-medium hover:text-black" >{faq.question}</span>
+                <span className="text-white text-lg font-medium hover:text-black">
+                  {faq.question}
+                </span>
                 <svg
                   className={`w-5 h-5 transition-transform duration-200 ${
                     activeIndex === index ? "rotate-180" : "rotate-0"
@@ -91,7 +90,7 @@ const FaqSection = () => {
               </button>
               {activeIndex === index && (
                 <div className="bg-white p-4 border-t border-gray-200">
-                  <p className=" text-gray-600">{faq.answer}</p>
+                  <p className="text-gray-600">{faq.answer}</p>
                 </div>
               )}
             </div>
