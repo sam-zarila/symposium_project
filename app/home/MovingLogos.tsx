@@ -53,7 +53,7 @@ const MovingLogos = () => {
                 alt={logo.name}
                 className="h-20 sm:h-28 w-20 sm:w-28 object-contain"
               />
-              <p className="text-gray-700 mt-2 text-sm sm:text-base font-medium">
+              <p className="text-green-400 mt-2 text-sm sm:text-base font-medium">
                 {logo.name}
               </p>
             </div>
