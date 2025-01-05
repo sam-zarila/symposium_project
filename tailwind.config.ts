@@ -8,23 +8,17 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
       animation: {
-        'move-left-to-right': 'moveLeftToRight 15s linear infinite',
-        'move-left-to-right-sm': 'moveLeftToRight 10s linear infinite', // Faster for small screens
-        'move-right-to-left': 'moveRightToLeft 15s linear infinite',
-        'move-right-to-left-sm': 'moveRightToLeft 10s linear infinite', // Faster for small screens
+        'scroll-left-to-right': 'scrollLeftToRight 15s linear infinite',
+        'scroll-right-to-left': 'scrollRightToLeft 15s linear infinite',
       },
       keyframes: {
-        moveLeftToRight: {
+        scrollLeftToRight: {
           '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
         },
-        moveRightToLeft: {
-          '0%': { transform: 'translateX(100%)' },
+        scrollRightToLeft: {
+          '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         },
       },

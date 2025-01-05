@@ -8,12 +8,12 @@ const logos = [
 
   const MovingLogos = () => {
     return (
-      <div className="relative w-full h-32 sm:h-40 overflow-hidden">
-        {/* Top Row Moving from Left to Right */}
-        <div className="absolute flex animate-move-left-to-right top-0 w-full">
-          {logos.map((logo, index) => (
+      <div className="relative w-full overflow-hidden h-32 sm:h-40 bg-gray-100">
+        {/* Top Row Moving Left to Right */}
+        <div className="absolute flex animate-scroll-left-to-right whitespace-nowrap">
+          {[...logos, ...logos].map((logo, index) => (
             <img
-              key={index}
+              key={`top-${index}`}
               src={`/images/${logo}`}
               alt={logo}
               className="mx-4 sm:mx-6 h-10 sm:h-12 object-contain"
@@ -21,11 +21,11 @@ const logos = [
           ))}
         </div>
   
-        {/* Bottom Row Moving from Right to Left */}
-        <div className="absolute flex animate-move-right-to-left bottom-0 w-full">
-          {logos.map((logo, index) => (
+        {/* Bottom Row Moving Right to Left */}
+        <div className="absolute flex animate-scroll-right-to-left whitespace-nowrap bottom-0">
+          {[...logos, ...logos].map((logo, index) => (
             <img
-              key={index}
+              key={`bottom-${index}`}
               src={`/images/${logo}`}
               alt={logo}
               className="mx-4 sm:mx-6 h-10 sm:h-12 object-contain"
