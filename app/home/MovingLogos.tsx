@@ -14,8 +14,8 @@ const logos = [
 
 const MovingLogos = () => {
   return (
-    <div className="relative w-full py-8 bg-gray-700">
-      <h2 className="text-center text-green-400 text-4xl sm:text-5xl font-bold mb-12">
+    <div className="relative w-full py-16 bg-gray-50">
+      <h2 className="text-center text-gray-800 text-4xl sm:text-5xl font-bold mb-12">
         Partner Industries
       </h2>
 
@@ -30,9 +30,9 @@ const MovingLogos = () => {
               <img
                 src={`/images/${logo.file}`}
                 alt={logo.name}
-                className="h-20 sm:h-28 w-20 sm:w-28 object-contain"
+                className="h-20 sm:h-28 w-20 sm:w-28 object-contain rounded-lg shadow-sm"
               />
-              <p className="text-green-400 mt-2 text-sm sm:text-base font-medium">
+              <p className="text-gray-700 mt-2 text-sm sm:text-base font-medium">
                 {logo.name}
               </p>
             </div>
@@ -41,7 +41,7 @@ const MovingLogos = () => {
       </div>
 
       {/* Bottom Row - Moving Right to Left */}
-      <div className="relative h-40 sm:h-48 overflow-hidden mt-2">
+      <div className="relative h-40 sm:h-48 overflow-hidden mt-8">
         <div className="absolute flex animate-scroll-right-to-left whitespace-nowrap">
           {[...logos, ...logos].map((logo, index) => (
             <div
@@ -51,9 +51,9 @@ const MovingLogos = () => {
               <img
                 src={`/images/${logo.file}`}
                 alt={logo.name}
-                className="h-20 sm:h-28 w-20 sm:w-28 object-contain"
+                className="h-20 sm:h-28 w-20 sm:w-28 object-contain rounded-lg shadow-sm"
               />
-              <p className="text-green-400 mt-2 text-sm sm:text-base font-medium">
+              <p className="text-gray-700 mt-2 text-sm sm:text-base font-medium">
                 {logo.name}
               </p>
             </div>
