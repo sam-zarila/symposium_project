@@ -88,10 +88,12 @@ export default function Header() {
           Help
         </a>
       </nav>
-
+      <a href="/GetStarted">
       <button className="hidden sm:block bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700">
         Get Started
       </button>
+      </a>
+      
     </header>
   );
 }

@@ -12,7 +12,7 @@ import {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* About Section */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">About Us</h3>
+              <h3 className="text-green-400  text-xl font-semibold mb-4">About Us</h3>
               <p className="text-sm text-gray-400">
                 The Online Auditing System is dedicated to providing advanced
                 performance tracking, real-time insights, and forecasting tools
@@ -22,12 +22,16 @@ import {
   
             {/* Quick Links */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+              <h3 className="
+              text-green-400
+              text-xl font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#features"
-                    className="text-gray-400 hover:text-gray-200 transition-colors"
+                    className="
+                    
+                    text-gray-400 hover:text-gray-200 transition-colors"
                   >
                     Features
                   </a>
@@ -37,13 +41,13 @@ import {
                     href="#pricing"
                     className="text-gray-400 hover:text-gray-200 transition-colors"
                   >
-                    Pricing
+                    Get Started
                   </a>
                 </li>
                 <li>
                   <a
                     href="#faq"
-                    className="text-gray-400 hover:text-gray-200 transition-colors"
+                    className="  text-gray-400 hover:text-gray-200 transition-colors"
                   >
                     FAQs
                   </a>
@@ -51,7 +55,9 @@ import {
                 <li>
                   <a
                     href="#contact"
-                    className="text-gray-400 hover:text-gray-200 transition-colors"
+                    className="
+                    
+                    text-gray-400 hover:text-gray-200 transition-colors"
                   >
                     Contact Us
                   </a>
@@ -61,21 +67,21 @@ import {
   
             {/* Contact Section */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+              <h3 className="text-green-400  text-xl font-semibold mb-4">Contact Us</h3>
               <p className="text-sm text-gray-400">
                 <strong>Email:</strong> support@audit-system.com
               </p>
               <p className="text-sm text-gray-400">
-                <strong>Phone:</strong> +123 456 7890
+                <strong>Phone:</strong> +265 888 456 7890
               </p>
               <p className="text-sm text-gray-400">
-                <strong>Address:</strong> 123 Audit Street, Business City
+                <strong>Address:</strong> Zomba, Malawi
               </p>
             </div>
   
             {/* Social Media */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+              <h3 className="text-green-400  text-xl font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
                 <a
                   href="https://facebook.com"
