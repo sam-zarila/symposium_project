@@ -53,7 +53,7 @@ const MarketNewsSection = () => {
                   </span>
                 </div>
                 <h3 className="mt-4 text-xl font-semibold text-green-600">{item.title}</h3>
-                <p className="mt-3 text-gray-600 line-clamp-3">
+                <p className="mt-3 text-gray-400 line-clamp-3">
                   {item.description}
                 </p>
                 <p className="mt-4 text-sm text-gray-500">
@@ -62,7 +62,7 @@ const MarketNewsSection = () => {
                 <div className="mt-auto">
                   <a
                     href={`/news/${item.id}`}
-                    className="inline-block mt-6 px-4 py-2 bg-blue-500 text-white rounded-md font-medium hover:bg-blue-600 transition-colors"
+                    className="inline-block mt-6 px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-blue-600 transition-colors"
                   >
                     Read More
                   </a>
