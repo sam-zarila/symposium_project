@@ -14,8 +14,8 @@ const logos = [
 
 const MovingLogos = () => {
   return (
-    <div className="relative w-full py-16 bg-gray-50">
-      <h2 className="text-center text-gray-800 text-4xl sm:text-5xl font-bold mb-12">
+    <div className="relative w-full py-12 bg-gray-700">
+      <h2 className="text-center text-green-800 text-4xl sm:text-5xl font-bold mb-12">
         Partner Industries
       </h2>
 
@@ -32,7 +32,7 @@ const MovingLogos = () => {
                 alt={logo.name}
                 className="h-20 sm:h-28 w-20 sm:w-28 object-contain rounded-lg shadow-sm"
               />
-              <p className="text-gray-700 mt-2 text-sm sm:text-base font-medium">
+              <p className="text-green-400 mt-2 text-sm sm:text-base font-medium">
                 {logo.name}
               </p>
             </div>
@@ -53,7 +53,7 @@ const MovingLogos = () => {
                 alt={logo.name}
                 className="h-20 sm:h-28 w-20 sm:w-28 object-contain rounded-lg shadow-sm"
               />
-              <p className="text-gray-700 mt-2 text-sm sm:text-base font-medium">
+              <p className="text-green-400 mt-2 text-sm sm:text-base font-medium">
                 {logo.name}
               </p>
             </div>

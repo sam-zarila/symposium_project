@@ -1,83 +1,46 @@
-// services.tsx
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css'; // Import Slick CSS
-import 'slick-carousel/slick/slick-theme.css'; // Import Slick Theme CSS
+import React from "react";
 
-const services = [
+const Services = [
   {
-    title: 'Real-Time Financial Monitoring',
+    title: "Real-Time Financial Monitoring",
     description:
-      'The Online Auditing System provides real-time financial tracking, helping businesses stay on top of income, expenditures, and profits.',
+      "Track income, expenditures, and profits in real-time, ensuring your business stays on top of its financial health.",
+    icon: "💰",
   },
   {
-    title: 'Performance Evaluation Across All Sectors',
+    title: "Performance Evaluation",
     description:
-      'Evaluates performance across employee productivity, customer satisfaction, operational efficiency, and financial performance.',
+      "Evaluate employee productivity, customer satisfaction, and operational efficiency across departments.",
+    icon: "📊",
   },
   {
-    title: 'Budget Prediction and Forecasting',
+    title: "Budget Prediction",
     description:
-      'Uses historical data and market trends to predict future budgets and help businesses plan for upcoming financial needs.',
+      "Forecast budgets based on historical data and market trends to ensure smooth financial planning.",
+    icon: "📅",
   },
   {
-    title: 'Actionable Insights and Improvement Solutions',
+    title: "Actionable Insights",
     description:
-      'Provides actionable recommendations based on performance evaluations, helping businesses make improvements quickly.',
+      "Receive tailored recommendations to address areas of underperformance and boost business growth.",
+    icon: "💡",
   },
   {
-    title: 'Data Visualization for Informed Decision-Making',
+    title: "Interactive Data Visualization",
     description:
-      'Integrates with Power BI to provide interactive visualizations, enabling business leaders to make data-driven decisions.',
+      "Visualize complex data through interactive dashboards, making decision-making quick and effective.",
+    icon: "📈",
   },
-];
+]
 
-export default function Services() {
-  const settings = {
-    dots: true, // Show navigation dots
-    infinite: true, // Infinite loop
-    speed: 500, // Transition speed
-    slidesToShow: 1, // Number of slides to show at a time
-    slidesToScroll: 1, // Number of slides to scroll at a time
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 5000, // Speed of autoplay
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3, // 3 slides on medium screens
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2, // 2 slides on small screens
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1, // 1 slide on mobile screens
-        },
-      },
-    ],
-  };
-
+const ServiceSection =()=>{
   return (
-    <section className="bg-darkBg py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-green-400 mb-10 text-center">
-          Our <span className="text-neon">Services</span>
-        </h2>
+    <section className="bg-gray-500 py-12 px-4">
+      <div className="mx-w-7xl ">
 
-        <Slider {...settings}>
-          {services.map((service, index) => (
-            <div key={index} className="bg-gray-400 p-8 rounded-md text-center">
-              <h3 className="text-xl font-bold text-neon mb-4">{service.title}</h3>
-              <p className="text-lightGray">{service.description}</p>
-            </div>
-          ))}
-        </Slider>
       </div>
+
+
     </section>
-  );
+  )
 }
