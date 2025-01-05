@@ -35,12 +35,12 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-gray-50 py-16 px-4">
+    <section className=" py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl sm:text-4xl font-bold text-green-400">
           Our Services
         </h2>
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-green-600">
           Explore our powerful tools designed to elevate your business to the
           next level.
         </p>
@@ -49,10 +49,10 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+              className="bg-gray-400 shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
             >
               <div className="text-4xl text-blue-500">{service.icon}</div>
-              <h3 className="mt-4 text-xl font-semibold text-gray-800">
+              <h3 className="mt-4 text-xl font-semibold text-green-800">
                 {service.title}
               </h3>
               <p className="mt-2 text-gray-600">{service.description}</p>
