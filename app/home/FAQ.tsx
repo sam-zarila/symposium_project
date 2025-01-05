@@ -18,16 +18,7 @@ const faqData = [
     answer:
       "The system provides real-time tracking of income, expenditures, and profits. It integrates financial data to offer actionable recommendations for improving profitability and avoiding financial setbacks.",
   },
-  {
-    question: "Can the system handle multiple departments and industries?",
-    answer:
-      "Yes, the system is capable of evaluating performance across various departments (finance, operations, customer service, etc.) and is adaptable to industries like hospitality, healthcare, law, and education, among others.",
-  },
-  {
-    question: "Is the Online Auditing System mobile-friendly?",
-    answer:
-      "Yes! The system is fully mobile-responsive and accessible on all devices, ensuring users can manage their business performance on the go.",
-  },
+ 
   {
     question: "How does the system help with budgeting and forecasting?",
     answer:
