@@ -14,7 +14,7 @@ const logos = [
 
 const MovingLogos = () => {
   return (
-    <div className="relative w-full py-16 bg-gray-50">
+    <div className="relative w-full py-16 bg-gray-700">
       <h2 className="text-center text-gray-800 text-4xl sm:text-5xl font-bold mb-12">
         Partner Industries
       </h2>
