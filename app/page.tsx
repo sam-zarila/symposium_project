@@ -6,6 +6,7 @@ import MovingLogos from "./home/MovingLogos";
 import ServicesSection from "./home/services";
 import MarketNewsSection from "./home/NewsRoom";
 import FaqSection from "./home/FAQ";
+import Footer from "./components/footer";
 
 
 
@@ -19,6 +20,8 @@ export default function Home(){
 <ServicesSection/>
 <MarketNewsSection/>
 <FaqSection/>
+<Footer/>
+
     </>
   )
 }
