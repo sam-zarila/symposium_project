@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from "react";
 
 const LoginForm = () => {
@@ -10,6 +8,7 @@ const LoginForm = () => {
   });
 
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -19,7 +18,7 @@ const LoginForm = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Basic validation
@@ -29,13 +28,37 @@ const LoginForm = () => {
     }
 
     setError("");
+    setSuccessMessage("");
 
-    // Submit form logic here
-    console.log("Login data:", formData);
+    try {
+      const response = await fetch("http://localhost:3000/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Invalid login credentials");
+      }
+
+      const data = await response.json();
+      setSuccessMessage("Login successful!");
+      console.log("Login successful:", data);
+
+      // Store the token or handle post-login actions
+      localStorage.setItem("token", data.accessToken);
+    } catch (err: any) {
+      setError(err.message || "Something went wrong. Please try again.");
+    }
   };
 
   return (
-    <section className="py-12 px-6 ">
+    <section className="py-12 px-6">
       <div className="max-w-md mx-auto bg-white shadow-md rounded-lg p-8">
         <h2 className="text-2xl font-bold text-green-600 text-center mb-6">
           Login to Your Account
@@ -44,6 +67,11 @@ const LoginForm = () => {
         {error && (
           <div className="bg-red-100 text-red-700 p-3 rounded mb-4">
             {error}
+          </div>
+        )}
+        {successMessage && (
+          <div className="bg-green-100 text-green-700 p-3 rounded mb-4">
+            {successMessage}
           </div>
         )}
 
@@ -94,10 +122,7 @@ const LoginForm = () => {
 
           {/* Forgot Password */}
           <div className="text-right">
-            <a
-              href="#"
-              className="text-green-500 hover:underline text-sm"
-            >
+            <a href="#" className="text-green-500 hover:underline text-sm">
               Forgot Password?
             </a>
           </div>
