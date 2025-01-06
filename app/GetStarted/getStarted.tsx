@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import axios from "axios";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const RegistrationForm = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Check for errors
@@ -50,9 +51,37 @@ const RegistrationForm = () => {
     }
 
     setErrors({ passwordMismatch: false, termsError: false });
+     const payload = {
+      name:formData.fullName,
+      email: formData.email,
+      password: formData.password,
+      organization: formData.organization,
+      sector: formData.sector,
+      phone: formData.phone,
+     };
 
-    // Submit form logic here
-    console.log("Form submitted:", formData);
+     try {
+
+      const response = await axios.post("http://localhost:3000/auth/register",payload)
+
+      if( response.status === 201) {
+        console.log("User registered successfully");
+        // Redirect to login page
+        window.location.href = "/login";
+
+      }
+      
+     } catch (error) {
+      if (axios.isAxiosError(error) && error.response) {
+        console.error("Error during registration:", error.response.data);
+        alert(`Registration failed: ${error.response.data.message || "Unknown error"}`);
+      } else {
+        console.error("Error during registration:", error);
+        alert("An unexpected error occurred. Please try again later.");
+      }
+      
+     }
+
   };
 
   return (
