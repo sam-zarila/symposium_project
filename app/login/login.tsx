@@ -51,6 +51,7 @@ const LoginForm = () => {
       const data = await response.json();
       setSuccessMessage("Login successful!");
       console.log("Login successful:", data);
+      window.location.href ='/Admin'
 
       // Store the token or handle post-login actions
       localStorage.setItem("token", data.accessToken);
