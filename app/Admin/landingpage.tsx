@@ -46,7 +46,7 @@ export default function Home() {
                 Track and monitor financial transactions, income, expenditures, and profits in real-time across different departments or projects.
               </p>
               <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                View Details
+                Start
               </button>
             </div>
   
@@ -57,7 +57,7 @@ export default function Home() {
                 Evaluate performance across various teams or sectors. Access detailed reports that help you make informed decisions.
               </p>
               <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                View Details
+                Start
               </button>
             </div>
   
@@ -68,29 +68,29 @@ export default function Home() {
                 Predict upcoming budgets using historical data and trends. Make future planning more efficient and accurate.
               </p>
               <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                View Details
+                Start
               </button>
             </div>
   
             {/* Card 4 - Data Visualization */}
             <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold">Data Visualization</h3>
+              <h3 className="text-xl font-bold">Expenditure Analysis</h3>
               <p className="text-gray-600 mt-2">
                 Use interactive and visual charts and graphs to make sense of complex data, improving your decision-making.
               </p>
               <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                View Details
+                Start
               </button>
             </div>
   
             {/* Card 5 - Actionable Insights */}
             <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
-              <h3 className="text-xl font-bold">Actionable Insights</h3>
+              <h3 className="text-xl font-bold">Actionable Insights & Currency Exchange</h3>
               <p className="text-gray-600 mt-2">
                 Receive recommendations on how to improve operational efficiency, based on current trends and metrics.
               </p>
               <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                View Details
+                Start
               </button>
             </div>
   
@@ -101,7 +101,7 @@ export default function Home() {
                 Manage users' roles and permissions. View activity logs to track user actions and ensure compliance.
               </p>
               <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                View Details
+                start
               </button>
             </div>
           </div>
