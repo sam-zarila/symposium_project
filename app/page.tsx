@@ -1,9 +1,27 @@
 import React from "react";
+import Header from "./components/header";
+import Hero from "./home/hero";
+import TrustedPartner from "./home/steps";
+import MovingLogos from "./home/MovingLogos";
+import ServicesSection from "./home/services";
+import MarketNewsSection from "./home/NewsRoom";
+import FaqSection from "./home/FAQ";
+import Footer from "./components/footer";
+
+
 
 export default function Home(){
   return(
     <>
-    <h1>hello here</h1>
+<Header/> 
+<Hero/>   
+<MovingLogos/>
+<TrustedPartner/> 
+<ServicesSection/>
+<MarketNewsSection/>
+<FaqSection/>
+<Footer/>
+
     </>
   )
 }
